@@ -223,3 +223,7 @@ class Blockchain:
             if isinstance(block, Leaf) and block.hash == hash:
                 return block
         return None
+       
+def start_new_epoch(self):
+        self.current_epoch +=  1
+        self.enlisted_producers[self.current_epoch] = []
